@@ -1,1 +1,27 @@
-Hello Everyone
+
+HTML
+--> Raw Structure
+
+Css
+--> look and feel(Design)
+
+
+Block level
+ --> starts from the new line
+ --> Take whole width of the screen 
+ --> ex - div, p, h1-h6, table
+
+Inline level
+--> Starts in the same line
+--> Only take space which is required
+--> ex - span, a, img
+
+Formatting tags
+----------------
+
+<b> , <strong> , <i>, <em> , <mark>, <del> <ins> , <sup>, <sub>
+
+Quotation
+-----------
+
+<blockquote> , <q>, <abbr>
