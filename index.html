@@ -5,6 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <!-- <link rel="stylesheet" href="styles.css"> -->
+   <style>
+      body {
+         background-color: bisque;
+      }
+      h1 {
+         color: blue;
+         font-size: 50px;
+      }
+      h2 {
+         color: red
+      }
+      table, th, td {
+         border: 2px solid purple;
+         border-collapse: collapse;
+         border-spacing: 60px;
+         
+         }
+         th, td {
+            background-color: palevioletred;
+            /* border-radius: 30px; */
+            border-style: solid;
+            border-color: red;
+            text-align: left;
+            /* padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 60px; */
+            padding: 5px;
+         }
+         th {
+            text-align:center;
+         }
+    </style> 
  </head>
  <body>
 
@@ -53,10 +87,14 @@
    <dt><b>HTTP</b></dt>
    <dd>Hyper Text Transfer Protocol</dd>
   </dl>
- <!-- Table tag -->
-<table border: 2>
-   <tr>
-      <th >Firstname</th>
+
+
+  <!-- Table tag -->
+  <!-- style="width: 100%" -->
+<!-- <table >
+    style="height:50px" -->
+   <!-- <tr  >
+      <th>Firstname</th>
       <th>Lastname</th>
       <th>Age</th>
    </tr>
@@ -71,13 +109,30 @@
       <td>94</td>
    </tr>
 
+</table> -->
+
+<table style="width:100%">
+ <tr>
+   <th>Name</th>
+   <td>Jill</td>
+ </tr>
+ <tr>
+   <th rowspan="2">Phone</th>
+   <td>74957439584</td>  
+ </tr>
+ <tr>
+   <td>438473857</td>
+ </tr>
 </table>
-<h1>I am DIV element</h1>
+
+
+<h1>I am H1 element</h1>
   <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
-  <h1>I am PARAGRAPH ELEMENT</h1> 
+  <h1>I am h1 ELEMENT</h1> 
   <p>Lorem Ipsum </p>
   <p>Lorem Ipsum </p>
-  <h1>I am SPAN ELEMENT</h1> 
+  <h1>I am h1 ELEMENT</h1> 
+  <h2>I am h2 ELEMENT</h2> 
   <span>Lorem Ipsum </span>
   <span>Lorem Ipsum </span>
 
