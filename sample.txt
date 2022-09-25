@@ -73,3 +73,21 @@ Spacing - space between each cells
 colspan - multiple columns
 
 rowspan - multiple rows 
+
+
+Selectors
+----------
+
+class and inside
+
+class - . (dot ) - group of elements
+id - # (hash) - unique element
+
+
+Box Model
+----------
+
+content - text, image 
+padding  space btwn content and border
+border - 1px, 2px, box 
+margin - outside the border
