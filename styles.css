@@ -1,9 +1,23 @@
+.main block {
+  border: 1px solid black;
+  width: 800px;
+  height: 600px;
+  padding: 50px;
+  
+}
+
+
+.inline-block {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    background-color: darkmagenta;
+    margin: 20px;
+}
+
 body {
-    background-color: bisque;
- }
- h1 {
-    color: blue
- }
- h2 {
-    color: red
- }
+   background-image: url(workspace.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
