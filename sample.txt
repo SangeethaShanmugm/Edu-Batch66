@@ -91,3 +91,39 @@ content - text, image
 padding  space btwn content and border
 border - 1px, 2px, box 
 margin - outside the border
+
+
+https://code.visualstudio.com/download - vs code install
+https://github.com/ - github - create account
+https://nodejs.org/en/ - install
+https://git-scm.com/downloads - install
+https://github.com/SangeethaShanmugm?tab=repositories  - follow
+https://www.linkedin.com/ - linkedin - create account
+https://www.netlify.com/ - create account(using github)
+
+
+vs code extension
+------------------
+
+spell check
+Tabnine
+vscode-icons
+eslint
+Gitlens
+githistory
+
+
+CSS position
+----------------
+
+1.static -default
+2.relative
+3.fixed
+4.absolute
+5.sticky
+
+z-index
+--------
+order an element
+
+stack - FILO / LIFO

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+        }
+        .z-index1 { 
+            position:relative;
+            z-index: 1;
+            border: 2px solid black;
+            height: 100px;           
+            margin: 20px;
+        }
+        .z-index2 {
+            position: absolute;
+            z-index: 3;
+            background: green;
+            height: 100px;
+            width: 50%;
+            left: 50px;
+            top: 50px;
+        }
+        .z-index3 {
+            position: absolute;
+            z-index: 2;
+            background: darkgoldenrod;
+            width: 35%;
+            height: 100px;
+            left: 270px;
+            top: -15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Z-index Example</h1>
+    <div class="container">
+        <div class="z-index1">This is Z-index 1</div>
+        <div class="z-index2">This is Z-index 2</div>
+        <div class="z-index3">This is Z-index 3</div>
+    </div>
+</body>
+</html>
