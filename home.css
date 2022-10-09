@@ -3,7 +3,6 @@
 #header {
   width: 100%;
   height: 60px;
-  border: 2px solid black;
   background-color: rgb(245, 69, 69);
 }
 
@@ -41,7 +40,7 @@
     width: 150px;
     height:150px;
     border-radius: 80px;
-    background-color: white;
+    background-color: rgb(240 229 229 / 60%);
     margin-left: 43%;
     margin-top: 4%;
     position: absolute;
@@ -62,25 +61,95 @@ font: normal normal 600 36px/55px Poppins;
 letter-spacing: 0px;
 color: #FFFFFF;
 opacity: 1;
-margin-top:19%;
-margin-left: 22%;
+margin-top:15%;
+margin-left: 29%;
 }
 
+#dropdown {
+  width: 42%;
+  height: 50px;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: -2%;
+}
 
+select {
+  height: 50px;
+  width: 40%;
+  font-size: 20px;
+  text-align: center
+
+}
+#select-style {
+  width: 59%;
+}
 
 
 /* QuickSearch CSS */
 #quicksearch {
-  width: 100%;
-  height: 600px;
-  border: 5px double orange
+  width: 80%;
+  /* height: 600px; */
+  /* border: 5px double orange */
+  margin-left: 8%;
+  margin-top: 2%;
+  margin-bottom:2%;
+  /* display: inline-block; */
+}
+
+#quickHeading {
+  /* color: #3b2632;   */
+  margin-left: 2%;
+  font-size: 30px;
+  font-weight: bold;
+  font: normal normal bold 30px/46px Poppins;
+  letter-spacing: 0px;
+  color: #192F60;
+ 
+}
+
+#quickSubheading {
+  color:#8C96AB;
+  font-size: 18px;
+  margin-left: 2%;
+
+}
+
+.tileContainer {
+  width: 30%;
+  height: 150px;
+  box-shadow: 10px 20px 15px #00000029;
+  margin-left: 2%;
+  margin-top: 3%;
+  float: left;
+  animation: dance 10s infinite;
+
 }
 
 
+@keyframes dance {
+  0% {transform: rotate(-5deg)}
+  25% {transform: rotate(0deg)}
+  50% {transform: rotate(5deg)}
+  65% {transform: rotate(1.1)}
+  100% {transform: rotate(-5deg)}
+}
 
 /* Footer CSS */
 #footer {
     width: 100%;
-    height: 60px; 
-    border: 4px groove black
+    height: 150px; 
+    border: 4px groove black;
+    text-align:center;
+    background-color: #3b2632;
+   
+}
+
+ul {
+  list-style: none;
+}
+
+#fotDiv {
+  width: 30%;
+  float: left;
+  border-right: 2px solid white; 
 }
