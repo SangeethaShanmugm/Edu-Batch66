@@ -54,7 +54,7 @@
     color: red;
  }
 
-#text-style{
+#heading{
 
 text-align: left;
 font: normal normal 600 36px/55px Poppins;
@@ -63,6 +63,7 @@ color: #FFFFFF;
 opacity: 1;
 margin-top:15%;
 margin-left: 29%;
+position: absolute;
 }
 
 #dropdown {
@@ -92,8 +93,8 @@ select {
   /* border: 5px double orange */
   margin-left: 8%;
   margin-top: 2%;
-  margin-bottom:2%;
-  /* display: inline-block; */
+  margin-bottom:10%;
+  display: inline-block;
 }
 
 #quickHeading {
@@ -104,7 +105,13 @@ select {
   font: normal normal bold 30px/46px Poppins;
   letter-spacing: 0px;
   color: #192F60;
+  display: block;
  
+}
+
+#quickHeading:hover {
+ font-size: 50px;
+
 }
 
 #quickSubheading {
@@ -134,22 +141,173 @@ select {
   100% {transform: rotate(-5deg)}
 }
 
+.tileContainer:hover {
+ transform:scale(1.1)
+ /* transform: skewY(10deg) */
+ /* transform: rotate(180deg); */
+}
+
+.tileComponent1 {
+  width: 50%;
+  float:left;
+}
+
+.tileComponent1 img {
+
+  width: 150%;
+  height: 180px;
+}
+
+.tileComponent2 {
+  width: 45%;
+  float:left;
+  margin-top: -72%;
+  margin-left: 75%;
+}
+
+.componentHeading {
+  font-size: 25px;
+  color: #192F60;
+}
+
+.componentHeading > a {
+  color: #192F60 !important;
+}
+
+.componentSubHeading {
+  font-size:20px;
+  color:#8C96AB;
+  float:left;
+  margin-top: -58%;
+  margin-left: 79%;
+}
+
+
+
+
 /* Footer CSS */
-#footer {
-    width: 100%;
-    height: 150px; 
-    border: 4px groove black;
+footer {
+    /* width: 100%; */
+    height: 140px; 
+    /* border: 4px groove black; */
     text-align:center;
     background-color: #3b2632;
-   
+   color: #fff;
 }
 
 ul {
   list-style: none;
 }
 
-#fotDiv {
+.fotDiv {
   width: 30%;
   float: left;
   border-right: 2px solid white; 
 }
+
+.noborder {
+  border: none;
+
+}
+
+@media screen and (max-width: 1600px) {
+  body {
+    background-color: skyblue;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  body {
+    background-color: pink;
+  }
+  #dropdown {
+    margin-left: 30%;
+    margin-top: 25%;
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: pink;
+  }
+  #heading {
+    margin-top: 20%;
+  }
+  #dropdown {
+    margin-left: 32%;
+    margin-top: 30%;
+  }
+
+
+  
+
+@media screen and (max-width: 999px) {
+  body {
+    background-color: pink;
+  }
+  .tileContainer {
+    width: 45%;
+  }
+  #logo {
+    margin-left: 35%;
+  }
+  #heading {
+    margin-left: 20%;
+  }
+  #dropdown {
+    margin-left: 15%;
+    margin-top: 30%;
+    width: 80%;
+  }
+
+}
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: pink;
+  }
+  .tileContainer {
+    width: 100%;
+  }  
+  #heading {
+    margin-left: 5%;
+    margin-top: 25%;
+    text-align: center;
+  }
+  #dropdown {
+    margin-left: 10%;
+    margin-top:40%;
+    width: 80%;
+  }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: pink;
+  }
+  #heading {
+    margin-left: 5%;
+    margin-top: 25%;
+    text-align: center;
+  }
+  #dropdown {
+    margin-left: 10%;
+    margin-top:50%;
+    width: 80%;
+  }
+  
+
+}
+
