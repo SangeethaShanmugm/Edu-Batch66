@@ -1,150 +1,107 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <!-- <link rel="stylesheet" href="styles.css"> -->
-   <style>
-      body {
-         background-color: bisque;
-      }
-      h1 {
-         color: blue;
-         font-size: 50px;
-      }
-      h2 {
-         color: red
-      }
-      table, th, td {
-         border: 2px solid purple;
-         border-collapse: collapse;
-         border-spacing: 60px;
-         margin-left: auto;
-         margin-right: auto;
-         
-         }
-         th, td {
-            background-color: palevioletred;
-            /* border-radius: 30px; */
-            border-style: solid;
-            border-color: red;
-            text-align: left;
-            /* padding-top: 10px;
-            padding-bottom: 20px;
-            padding-left: 30px;
-            padding-right: 60px; */
-            padding: 50px;
-         }
-         th {
-            text-align:center;
-         }
-         button {
-            margin: 50px;
-            padding: 20px;
-            border: 3px solid red;
-         }
-    </style> 
- </head>
- <body>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css"/>
+</head>
+<body>
+    <div id="header">
+       
+        <div id="icon">
+            <h1>Zomato</h1>
+        </div>
+        
+        <div id="social">
+       
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="image/fb.png" alt="fb" class="s-logo"/>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="image/insta.png" alt="insta" class="s-logo"/>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="image/youtube.png" alt="yt" class="s-logo"/>
+            </a> 
+              
+        </div>
 
-    <!-- Heading tag -->
-   <h1>First heading</h1> 
-   <h2>Second heading</h2>
-   <h3>Third heading</h3>
-   <h4>fourth heading</h4>
-   <h5>Fifth heading</h5>
-   <h6>Sixth heading</h6>
-   <!-- paragraph tag -->
-   <p>My first paragraph</p>
-   <!-- image tag -->
-   <img src="data:image/png;base64,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" width="200px" height="100px"  alt="Welcome to Edureka"> </img>
-   <br><br/>
-   <!-- link tag -->
-   <a 
-   href="sample.txt" 
-   target="_blank"
-   >Go to Link Page!!!</a>
-   <br><br />
-   <br><br />
-
- <!-- Lists -->
-  <!-- unordered list - plain bullets -->
-  <ul>
-   <li>Python</li>
-   <li>Java</li>
-   <li>Devops</li>
-   <li>Cloud Computing</li>
-   <li>Full Stack</li>
-  </ul>
-  <!-- ordered list - number -->
-  <ol>
-   <li>Python</li>
-   <li>Java</li>
-   <li>Devops</li>
-   <li>Cloud Computing</li>
-   <li>Full Stack</li>
-  </ol>
-  <!-- definition list - arrange items like dictionary -->
-  <dl>
-   <dt><b>HTML</b></dt>
-   <dd>Hyper Text markup Language</dd>
-   <dt><b>HTTP</b></dt>
-   <dd>Hyper Text Transfer Protocol</dd>
-  </dl>
+    </div>
 
 
-  <!-- Table tag -->
-  <!-- style="width: 100%" -->
-<!-- <table >
-    style="height:50px" -->
-   <!-- <tr  >
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Age</th>
-   </tr>
-   <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-   </tr>
-   <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-   </tr>
-
-</table> -->
- <!-- Button -->
- <button>Click Here!!!</button>
-
-<table style="width:50%">
- <tr>
-   <th>Name</th>
-   <td>Jill</td>
- </tr>
- <tr>
-   <th rowspan="2">Phone</th>
-   <td>74957439584</td>  
- </tr>
- <tr>
-   <td>438473857</td>
- </tr>
-</table>
+    <div id="search">
+        <div id="logo">
+           <span>e!</span>
+        </div>
+       <div id="heading">
+        <p>Find the best restaurants, cafés, and bars</p>
+    </div>
+    <div id="dropdown">
+        <select>
+           <option>Please select a location </option>
+           <option>Bangalore</option>
+           <option>Mumbai</option>
+        </select>
+        <select id="select-style">
+            <option>Select restaurants </option>
+            <option>Toscano</option>
+            <option>Ozaa</option>
+            <option>Spice Terrace</option>
+         </select>
+    </div>
+    </div>
+ 
 
 
-<h1>I am H1 element</h1>
-  <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
-  <h1>I am h1 ELEMENT</h1> 
-  <p>Lorem Ipsum </p>
-  <p>Lorem Ipsum </p>
-  <h1>I am h1 ELEMENT</h1> 
-  <h2>I am h2 ELEMENT</h2> 
-  <span>Lorem Ipsum </span>
-  <span>Lorem Ipsum </span>
+    <div id="quicksearch">
+     <span id="quickHeading">Quick Search</span>
+     <span id="quickSubheading">Discover restaurants by type of meal</span>
+      <div class="mainTileContainer">
+        
+     <div class="tileContainer">
+          <div class="tileComponent1">
+            <img src="image/1.png" alt="breakfast"/>
+          </div>
+          <div class="tileComponent2">
+           <div class="componentHeading">
+            <a href="listing.html" target="_blank">Breakfast</a>
+           </div>
+          </div>
+          <div class="componentSubHeading">
+            Start your day with exclusive breakfast options
+          </div>          
+    </div>
+    </div>
+    </div>
 
+
+<footer>
+    <hr>
+    
+        <h3>Copyright Developer 2022. All Rights Reserved</h3>
+        <div class="fotDiv">
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <div class="fotDiv">
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <div class="fotDiv noborder">
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    
+  
+</footer>
+    
 </body>
- </html>
-
-<!-- shift + 1 = ! -->
+</html>
