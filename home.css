@@ -71,7 +71,7 @@ position: absolute;
   height: 50px;
   position: absolute;
   margin-left: 30%;
-  margin-top: -2%;
+  margin-top: 21%;
 }
 
 select {
@@ -148,7 +148,7 @@ select {
 }
 
 .tileComponent1 {
-  width: 50%;
+  width: 40%;
   float:left;
 }
 
@@ -162,7 +162,7 @@ select {
   width: 45%;
   float:left;
   margin-top: -72%;
-  margin-left: 75%;
+  margin-left: 67%;
 }
 
 .componentHeading {
@@ -179,7 +179,7 @@ select {
   color:#8C96AB;
   float:left;
   margin-top: -58%;
-  margin-left: 79%;
+  margin-left: 69%;
 }
 
 
