@@ -47,8 +47,8 @@
     
 }
  #logo>span {
-    margin-left: 30%;
-    margin-top: 7%;
+    margin-left: 27%;
+    margin-top:-6%;
     position: absolute;
     font-size: 94px;
     color: red;
@@ -254,11 +254,11 @@ ul {
     width: 45%;
   }
   #logo {
-    margin-left: 35%;
+    margin-left: 42%;
   }
   #heading {
     margin-left: 20%;
-  }
+  } 
   #dropdown {
     margin-left: 15%;
     margin-top: 30%;
@@ -279,7 +279,7 @@ ul {
     width: 100%;
   }  
   #heading {
-    margin-left: 5%;
+    margin-left: 12%;
     margin-top: 25%;
     text-align: center;
   }
