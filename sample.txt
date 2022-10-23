@@ -170,3 +170,10 @@ jQuery
         <link rel="stylesheet" href="boot.css"/>
 
 
+
+
+
+
+excellent - counted
+
+good, average or bad  -not counted 
