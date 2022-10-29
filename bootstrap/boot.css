@@ -1,34 +1,52 @@
 .slideImg {
     width: 100%;
-    height: 500px !important;
 }
 
+.trashicon {
+    font-size: 50px;
+    color: red;
+}
+
+.editicon {
+    font-size: 50px;
+    color: green;
+}
+
+.btn-teal {
+    background-color: teal !important;
+}
 
 #first {
     height: 200px;
     background-color: olive;
 }
+
 #second {
     height: 200px;
-    background-color:green;
+    background-color: green;
 }
+
 #third {
     height: 200px;
-    background-color:red;
+    background-color: red;
 }
+
 #fourth {
     height: 200px;
-    background-color:purple;
+    background-color: purple;
 }
+
 #five {
     height: 200px;
-    background-color:pink;
+    background-color: pink;
 }
-#six {
+
+#sixth {
     height: 200px;
-    background-color:blue;
+    background-color: blue;
 }
-#seven {
+
+#seventh {
     height: 200px;
-    background-color:skyblue;
+    background-color: skyblue;
 }

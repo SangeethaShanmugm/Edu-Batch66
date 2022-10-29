@@ -6,12 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" >
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4338603d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="boot.css"/>
+
 </head>
 
 <body>
@@ -56,17 +62,18 @@
                 <li class="active" data-target="#devCarousel" data-slide-to="0"></li>
                 <li data-target="#devCarousel" data-slide-to="1"></li>
                 <li data-target="#devCarousel" data-slide-to="2"></li>
+                <li data-target="#devCarousel" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
-             <div class="item active">
-                <img src="../image/travel.jpg" alt="travel"  class="slideImg">
-             </div>
-             <div class="item">
-                <img src="../image/travel1.jpg" alt="travel" class="slideImg">
-             </div>
-             <div class="item">
-                <img src="../image/travel2.jpg" alt="travel" class="slideImg">
-             </div>
+                <div class="item active">
+                    <img src="../image/travel.jpg" alt="travel" class="slideImg">
+                </div>
+                <div class="item">
+                    <img src="../image/travel1.jpg" alt="travel" class="slideImg">
+                </div>
+                <div class="item">
+                    <img src="../image/travel2.jpg" alt="travel" class="slideImg">
+                </div>
             </div>
             <a class="left carousel-control" href="#devCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -75,8 +82,149 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>
+        <div class="jumbotron">
+            <h1>Developer Funnel</h1>
+            <p>
+                This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
+                content or information.
+            </p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#devModel">Click</button>
+            <button class="btn btn-success">Click</button>
+            <button class="btn btn-warning">Click</button>
+            <button class="btn btn-danger">Click</button>
+            <button class="btn btn-info">Click</button>
+        </div>
+        <!-- <div id="devModel" class="modal fade"  role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Developer Funnel</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in
+                            the document and remove scroll from the
 
-    </div>
+                            <body> so that modal content scrolls instead.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <hr />
+
+        <div class="container">
+            <h2>Modal Example</h2>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open
+                Modal</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <hr />
+        <span class="glyphicon glyphicon-plane"></span>
+        <span class="glyphicon glyphicon-edit editicon"></span>
+        <span class="glyphicon glyphicon-trash trashicon"></span>
+        <i class='fab fa-facebook-f'></i>
+        <hr />
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Students
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kailash</td>
+                            <td>UI</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Shiv</td>
+                            <td>Frontend</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Dhanraj</td>
+                            <td>UI</td>
+                            <td>
+                                <button type="button" class="btn btn-success">
+                                    <span class="glyphicon glyphicon-edit"></span>
+                                </button>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <hr />
+
+        <img src="../image/1.png" class="img-responsive" alt="" />
+        <div class="row">
+            <div id="first" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                <img src="../image/1.png" class="img-responsive" alt="" />
+            </div>
+            <div id="second" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">Second</div>
+                <div id="third" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">third</div>
+                    <div id="fourth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">fourth</div>
+                        <div id="sixth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">sixth</div>
+                            <button class="btn btn-warning btn-teal">Click</button>
+                        </div>
+                        <div id="seventh" class="col-lg-2 col-md-3 col-sm-4 col-xs-6">seventh</div>
+                    </div>
 </body>
 
 </html>
