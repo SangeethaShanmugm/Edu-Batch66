@@ -50,3 +50,20 @@
     height: 200px;
     background-color: skyblue;
 }
+
+.col-md {
+    background-color: red;
+}
+
+.col-sm {
+    background-color: green;
+
+}
+
+.col-md-8 {
+    background-color: purple;
+
+}
+.col-md-4 {
+    background-color: pink;
+}
