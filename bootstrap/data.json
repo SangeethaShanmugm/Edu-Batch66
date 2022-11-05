@@ -1,0 +1,41 @@
+{
+  "employee": [
+    {
+      "fname": "Sangeetha",
+      "lname": "Shanmugam",
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "gender": "female",
+      "lang": [
+        "html",
+        "js"
+      ],
+      "region": "India",
+      "id": 1
+    },
+    {
+      "fname": "Hello",
+      "lname": "World",
+      "email": "hello@gmail.com",
+      "password": "12345",
+      "gender": "male",
+      "lang": [
+        "html",
+        "js",
+        "css"
+      ],
+      "region": "India",
+      "id": 2
+    },
+    {
+      "fname": "abc",
+      "lname": "abc",
+      "email": "abc@gma",
+      "password": "",
+      "region": "India",
+      "id": 3
+    }
+  ]
+}
+
+
