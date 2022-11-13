@@ -16,7 +16,9 @@ console.log(a);
 console.log(typeof a)
 
 
-let b;
+let b = 10;
+b = 20;
+console.log(b) // 20
 let c = b;
 console.log("B is bigger", b)
 console.log(c)
@@ -128,7 +130,7 @@ var a = true+true
 console.log(a)
         //1  + 0 = 1
 var a = true +false
-console.log(a)
+console.log(a) // 1
 
 10+true //11
 //10+1 =11
@@ -141,3 +143,68 @@ var z1 = "true"- "true"
 console.log(a)
 console.log(z)
 console.log(z1)
+
+var a = "hi"
+typeof(a) //string
+var a = 10
+typeof(a) // number
+var a = true
+typeof(a)// boolean
+
+var a  = 5%2
+console.log(a)
+
+5%3 // 2
+5%4 // 1
+5%5 // 0
+2%4 // 2
+3%4 // 3
+
+// string+string = string
+// string+number = string
+// number+string = string
+// number+number = number
+
+"10"+20+30
+//"1020"+30
+//"102030"
+
+10+"20"+30
+"1020"+30
+"102030"
+
+10+20+"30"
+30+"30"
+"3030"
+
+"10"+20+30-1
+102029
+
+10+"20"+30-1
+102029
+
+var s = (10+20+"30"-1)
+console.log(s) //3029
+
+"10"*20
+200
+
+"10"/20
+0.5
+
+"10a"-1
+//NaN
+
+"10"-1
+9
+
+10-"1"
+9
+
+10-"1a"
+NaN
+
+"20"*"5"
+100
+"20a"*"5"
+NaN
