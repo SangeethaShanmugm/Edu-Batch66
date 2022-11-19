@@ -5,7 +5,8 @@
 var a = 10 // assignment
 var b = "10"
 var c = 20
-
+a==b //true
+a === b // false
 var c  = a == b // 
 console.log(c)
 
