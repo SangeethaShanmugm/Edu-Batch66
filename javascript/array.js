@@ -47,9 +47,12 @@ console.log(a.slice(0,-2));
 //['Dubai', 'Delhi', 'Mumbai', 'Helsinki', 'London', 'Amsterdam']
 
 var a = ['Dubai', 'Delhi', 'Mumbai', 'Helsinki', 'London', 'Amsterdam', 'Boston', 'Venice']
-// a.splice(startIndex, DeleteCount, Values)
+
+
+// syntax for splice => a.splice(startIndex, DeleteCount, Values)
 //remove 2 values from index number 2
 console.log(a.splice(2,2));
+
 //['Mumbai', 'Helsinki']
 
 
