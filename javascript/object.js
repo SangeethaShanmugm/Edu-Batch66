@@ -8,7 +8,7 @@ var movieType = "Action";
 var movieName1 = "Jab We Met";
 var movieRating1 = 4.7;
 var movieType1 = "Romantic";
-
+//object => { key: "value"}
 var movie = {
   name: "Avengers",
   rating: 4.5,
