@@ -186,4 +186,14 @@ flex - 1 dimensional layout - either rows/columns
 
 
 
+API call
+----------
+
+https://api.openweathermap.org/data/3.0/onecall?lat=12.9348766&lon=77.5887279&appid=a764710199b4aa019c290680e78b0bf3
+
+
+https://api.openweathermap.org/data/2.5/weather?lat=12.9348766&lon=77.5887279&appid=a764710199b4aa019c290680e78b0bf3
+
+https://api.openweathermap.org/data/2.5/forecast/daily?lat=12.9348766&lon=77.5887279&cnt=5&appid=a923915725db1ef670fcffd6eb38e029
+
 
