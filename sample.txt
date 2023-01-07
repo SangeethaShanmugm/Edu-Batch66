@@ -197,3 +197,10 @@ https://api.openweathermap.org/data/2.5/weather?lat=12.9348766&lon=77.5887279&ap
 https://api.openweathermap.org/data/2.5/forecast/daily?lat=12.9348766&lon=77.5887279&cnt=5&appid=a923915725db1ef670fcffd6eb38e029
 
 
+
+Node js- Backend
+MongoDb - Database
+React - frontend
+-> Single Page Application(SPA)
+-> Reusability - creating once using it many times
+home, about, contact
