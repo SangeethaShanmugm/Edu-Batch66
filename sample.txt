@@ -197,6 +197,23 @@ https://api.openweathermap.org/data/2.5/weather?lat=12.9348766&lon=77.5887279&ap
 https://api.openweathermap.org/data/2.5/forecast/daily?lat=12.9348766&lon=77.5887279&cnt=5&appid=a923915725db1ef670fcffd6eb38e029
 
 
+Step for data
+---------------
+
+1. write down all the pages you are going to have in your website
+2. start creating data 
+
+> Home Page
+> Listing Page
+> Detail Page
+> Place order Page
+> Order Listing
+
+=> List of city
+=> List of Restaurants
+=> QuickSearch List
+=> List of Menu
+
 
 Node js- Backend
 MongoDb - Database
@@ -204,3 +221,52 @@ React - frontend
 -> Single Page Application(SPA)
 -> Reusability - creating once using it many times
 home, about, contact
+
+
+Node js
+--------
+Single threaded Asynchronous Non Block input/output(I/O)
+
+
+Node Js do not require any server to compile
+
+Node Inbuilt packages
+----------------------
+OS - Operating System
+FS - File System
+HTTP
+
+Package.json
+--------------
+> Starting point to the app
+> It contains all the packages we require
+> It contains the scripts to run the app
+> Meta Data(Description of the app)
+
+Steps to generate package.json
+----------------------------------
+
+> Node js must be installed in your system/laptop
+> go inside the project folder using cmd in start
+> give code ., so it will open vs code - vs code terminal - npm init
+> Answer all questions
+> Type 'yes'
+
+
+CRUD operation
+---------------
+
+C > Create(POST)
+R > Read (GET)
+U -> Update(PUT)
+D -> Delete(DELETE)
+
+
+
+
+next sesion
+-----------
+Open Source
+install packages 
+global packages
+dev dependancy

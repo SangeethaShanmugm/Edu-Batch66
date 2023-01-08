@@ -1,6 +1,8 @@
 const fs = require("fs");
 
-// fs.writeFile("note.txt", "Awesome", () => {
+
+// const data = "awesome";
+// fs.writeFile("note.txt", data, () => {
 //   console.log("File created");
 // });
 
@@ -10,15 +12,15 @@ const fs = require("fs");
 //   console.log("File appended");
 // });
 
-// fs.readFile("note.txt", "UTF-8", (err, data) => {
-//   if (err) throw err;
-//   console.log(data);
-// });
+fs.readFile("note.txt", "UTF-8", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
 
-// fs.rename("note.txt", "note.csv", (err) => {
-//   if (err) throw err;
-//   console.log("file renamed");
-// });
+fs.rename("note.txt", "note.csv", (err) => {
+  if (err) throw err;
+  console.log("file renamed");
+});
 
 fs.unlink("./note.csv", (err) => {
   console.log("file deleted");
