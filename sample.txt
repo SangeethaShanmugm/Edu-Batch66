@@ -270,3 +270,67 @@ Open Source
 install packages 
 global packages
 dev dependancy
+
+
+Database
+---------
+1. Relational Db - SQL, mySQL, Oracle, Microsoft server - table format - rows &  columns
+2. Non-Relational DB - MongoDb, couchdb, graphsql, 
+
+
+MongoDb
+---------
+BSON - Binary Data format
+store in BSON 
+retrieve data in JSON
+
+
+sql - table - columns & rows
+
+mongodb  - document {}
+table -collection
+
+ {
+    "id": 1,
+    "name": "Avengers",
+    "rating": 4.5,
+    "type": "Action",
+  },
+  {
+    id: 2,
+    name: "Jab We Met",
+    rating: 4.7,
+    type: "Romantic",
+  },
+  
+  eg
+  updateOne(name: "Harry Potter")
+
+  {
+    "id": 1,
+    "name": "Harry Potter",
+    "rating": 4.5,
+    "type": "Action",
+  },
+
+
+  updateMany(name: "Harry Potter")
+
+  {
+    "id": 1,
+    "name": "Harry Potter",
+    "rating": 4.5,
+    "type": "Action",
+  },
+  {
+    id: 2,
+    name: "Harry Potter",
+    rating: 4.7,
+    type: "Romantic",
+  },
+
+  replaceOne(name: "Avengers")
+
+  {
+    name: "Avengers"
+  },
