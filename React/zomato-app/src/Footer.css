@@ -1,0 +1,31 @@
+footer {
+    height: 200px;
+    background-color: #3b2632;
+    color: #fff;
+    width: 100%;
+    display: inline-block
+}
+
+ul {
+    list-style: none;
+}
+
+.fotDiv {
+    width: 30%;
+    float: left;
+    border-right: 2px solid white;
+
+}
+
+.noBorder {
+    border: none
+}
+
+.social {
+    display: inline-block;
+    width: 100%
+}
+
+.socialImg {
+    height: 50px;
+}
