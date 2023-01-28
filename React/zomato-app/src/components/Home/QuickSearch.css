@@ -1,0 +1,106 @@
+/* QuickSearch CSS */
+#quicksearch {
+    width: 80%;
+    /* height: 600px; */
+    /* border: 5px double orange */
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    display: inline-block;
+}
+
+#quickHeading {
+    /* color: #3b2632;   */
+    margin-left: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    font: normal normal bold 30px/46px Poppins;
+    letter-spacing: 0px;
+    color: #192F60;
+    display: block;
+
+}
+
+#quickHeading:hover {
+    font-size: 50px;
+
+}
+
+#quickSubheading {
+    color: #8C96AB;
+    font-size: 18px;
+    margin-left: 2%;
+
+}
+
+.tileContainer {
+    width: 30%;
+    height: 178px;
+    box-shadow: 10px 20px 15px #00000029;
+    margin-left: 2%;
+    margin-top: 3%;
+    float: left;
+    animation: dance 10s infinite;
+
+}
+
+
+@keyframes dance {
+    0% {
+        transform: rotate(-5deg)
+    }
+
+    25% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(5deg)
+    }
+
+    65% {
+        transform: rotate(1.1)
+    }
+
+    100% {
+        transform: rotate(-5deg)
+    }
+}
+
+.tileContainer:hover {
+    transform: scale(1.1)
+        /* transform: skewY(10deg) */
+        /* transform: rotate(180deg); */
+}
+
+.tileComponent1 {
+    width: 50%;
+    float: left;
+}
+
+.tileComponent1 img {
+
+    width: 100%;
+    height: 180px;
+}
+
+.tileComponent2 {
+    width: 45%;
+    float: left;
+    margin-top: 3%;
+    margin-left: 1%;
+}
+
+.componentHeading {
+    font-size: 25px;
+    color: #192F60;
+}
+
+.componentHeading>a {
+    color: #192F60 !important;
+}
+
+.componentSubHeading {
+    font-size: 20px;
+    color: #8C96AB;
+}
