@@ -375,3 +375,19 @@ props
 ------
 => props helps to transfer data between nested components
 => We cannot update the value of the props
+
+
+// Mongo Atlas
+// ------------
+
+// 1. Database Access - username, password - Build in Role - Atlas Admin - Creata User
+// 2. Network Access - 0.0.0.0/0
+
+
+
+Install
+Mongodb – npm i mongodb
+Dotenv  - npm i dotenv
+Cors – - npm i cors
+Bodyparser – npm i body-parser
+

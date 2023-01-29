@@ -150,6 +150,7 @@ db.books.find({}, { summary: 0 }).pretty();
 
 //sorting
 //asc - (1)
-db.books.find({}).sort({rating: 1}).pretty();
+db.books.find({}).sort({ rating: 1 }).pretty();
 //desc - (-1)
-db.books.find({}).sort({rating: -1}).pretty();
+db.books.find({}).sort({ rating: -1 }).pretty();
+
