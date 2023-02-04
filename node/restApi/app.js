@@ -94,7 +94,7 @@ app.get("/", (req, res) => {
 });
 //location endpoint
 app.get("/locations", (req, res) => {
-  db.collection("location")
+  db.collection("locations")
     .find()
     .toArray((err, result) => {
       if (err) throw err;
@@ -114,7 +114,7 @@ app.get("/quickSearch", (req, res) => {
 
 //get restaurant data
 app.get("/restaurant", (req, res) => {
-  db.collection("menu")
+  db.collection("restaurant")
     .find()
     .toArray((err, result) => {
       if (err) throw err;
@@ -141,7 +141,7 @@ app.get("/data/:id", (req, res) => {
 MongoClient.connect(MONGO_URL, (err, client) => {
   console.log("Mongo is connected");
   if (err) console.log("Error while connecting");
-  db = client.db("ed66we");
+  db = client.db("zomato-app");
   app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
   });
