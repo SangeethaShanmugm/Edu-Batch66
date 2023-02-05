@@ -1,23 +1,26 @@
-const QuickDisplay = () => {
-  return (
-    <div class="mainTileContainer">
-      <div class="tileContainer">
-        <div class="tileComponent1">
-          <img src="https://i.ibb.co/8rPxkWP/lunch.jpg" alt="breakfast" />
-        </div>
-        <div class="tileComponent2">
-          <div class="componentHeading">
-            <a href="listing.html" target="_blank">
-              Breakfast
-            </a>
+import { Link } from "react-router-dom";
+import "./QuickSearch.css";
+
+const QuickDisplay = (props) => {
+  const listMeal = ({ mealData }) => {
+    if (mealData) {
+      return mealData.map((item) => {
+        return (
+          <div class="tileContainer">
+            <div class="tileComponent1">
+              <img src={item.meal_image} alt="breakfast" />
+            </div>
+            <div class="tileComponent2">
+              <div class="componentHeading">{item.mealtype}</div>
+            </div>
+            <div class="componentSubHeading">{item.content}</div>
           </div>
-        </div>
-        <div class="componentSubHeading">
-          Start your day with exclusive breakfast options
-        </div>
-      </div>
-    </div>
-  );
+        );
+      });
+    }
+  };
+
+  return <div class="mainTileContainer">{listMeal(props)}</div>;
 };
 
 export default QuickDisplay;

@@ -9,6 +9,7 @@ const Routing = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/listing/:mealId" element={<Listing />} /> */}
         </Routes>
         <Footer />
       </div>

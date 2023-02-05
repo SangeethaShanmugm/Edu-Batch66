@@ -55,7 +55,7 @@ export default class Search extends Component {
     fetch(lurl, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
-        // this.setState({ location: data });
+        this.setState({ location: data });
         console.log(data);
       });
   }

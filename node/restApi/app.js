@@ -116,8 +116,17 @@ app.get("/quickSearch", (req, res) => {
 
 //get restaurant data
 app.get("/restaurant", (req, res) => {
+  let query = {};
+  let stateId = Number(req.query.state_id);
+  let mealId = Number(req.query.mealId);
+  if (stateId) {
+    query = { state_id: stateId };
+  } else if (mealId) {
+    query = { "mealTypes.mealtype_id": mealId };
+  }
+
   db.collection("restaurant")
-    .find()
+    .find(query)
     .toArray((err, result) => {
       if (err) throw err;
       res.send(result);
