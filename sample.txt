@@ -391,3 +391,11 @@ Dotenv  - npm i dotenv
 Cors – - npm i cors
 Bodyparser – npm i body-parser
 
+
+git push
+--------
+git init
+git add .
+git commit -m "commitmsg"
+git remote add origin https://github.com/SangeethaShanmugm/restApi.git =>  repo name
+git push -u origin master

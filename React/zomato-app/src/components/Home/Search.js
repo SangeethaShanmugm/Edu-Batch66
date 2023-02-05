@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./Search.css";
+
+const lurl = "https://zomato-app.onrender.com/locations";
+const rurl = "https://zomato-app.onrender.com/restaurant";
+
 export default class Search extends Component {
   constructor() {
     super();
@@ -8,6 +12,18 @@ export default class Search extends Component {
       resturants: "",
     };
   }
+
+  renderCity = (data) => {
+    if (data) {
+      return data.map((item) => {
+        return (
+          <option key={item._id} value={item.state_id}>
+            {item.state}
+          </option>
+        );
+      });
+    }
+  };
 
   render() {
     return (
@@ -21,8 +37,7 @@ export default class Search extends Component {
         <div id="dropdown">
           <select>
             <option>----SELECT CITY----</option>
-            <option>Bangalore</option>
-            <option>Mumbai</option>
+            {this.renderCity(this.state.location)}
           </select>
           <select id="select-style">
             <option>---SELECT RESTURANTS----</option>
@@ -33,5 +48,15 @@ export default class Search extends Component {
         </div>
       </div>
     );
+  }
+
+  //api calling on page load
+  componentDidMount() {
+    fetch(lurl, { method: "GET" })
+      .then((res) => res.json())
+      .then((data) => {
+        // this.setState({ location: data });
+        console.log(data);
+      });
   }
 }
