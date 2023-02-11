@@ -399,3 +399,32 @@ git add .
 git commit -m "commitmsg"
 git remote add origin https://github.com/SangeethaShanmugm/restApi.git =>  repo name
 git push -u origin master
+
+
+
+Node js
+----------
+params 
+------
+what we pass after /
+it is compulsary to define in the path as well
+pass 1 or 2 values
+
+queryparams
+-----------
+what we pass after ?
+we no need to define in the path
+use to pass multiple values
+
+const id = req.params.id;
+  const state = req.query.state;
+  const country = req.query.country;
+  console.log("state=", state);
+  console.log("country=", country);
+  res.send(id);
+
+find with a condition
+----------------------
+
+db.restaurant.find({state_id: 2, location_id:5 })
+db.restaurant.find({mealTypes.mealtype_id: 1})

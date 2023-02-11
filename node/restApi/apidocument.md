@@ -5,10 +5,11 @@ https://zomato-app.onrender.com/locations
 http://localhost:8080/locations
 
 => List of restaurant (Get)
-http://localhost:8080/restaurant
-https://zomato-app.onrender.com/restaurant
+http://localhost:8080/restaurants
+https://zomato-app.onrender.com/restaurants
 
 => Restaurant on the basis of city (Get)
+http://localhost:8080/restaurants?stateId=2
 
 => List of QuickSearch (Get)
 https://zomato-app.onrender.com/quickSearch
@@ -17,6 +18,8 @@ http://localhost:8080/quickSearch
 ## Page 2
 
 => List of restaurants on basis of meal (Get)
+http://localhost:8080/restaurants?mealId=5
+http://localhost:8080/restaurants?mealId=5&stateId=2
 => Filter on basis of cuisine (Get)
 => Filter on basis of cost (Get)
 => sort on basis of cost (Get)

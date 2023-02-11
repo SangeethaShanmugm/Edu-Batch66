@@ -27,6 +27,15 @@ const data = [
   },
 ];
 
+const authkey = "b7e7620a6a53b247f5c77d7a6a5bbc9b";
+function auth(key) {
+  if (authkey === key) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // const locations = [
 //   {
 //     location_id: 1,
@@ -96,35 +105,46 @@ app.get("/", (req, res) => {
 });
 //location endpoint
 app.get("/locations", (req, res) => {
-  db.collection("locations")
-    .find()
-    .toArray((err, result) => {
-      if (err) throw err;
-      res.send(result);
-    });
+  // let key = req.query.key;
+  let key = req.header("x-auth-key");
+  if (authkey === key) {
+    db.collection("locations")
+      .find()
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.send(result);
+      });
+  } else {
+    res.send("Unauthorized ");
+  }
 });
 
 //get mealtype data
 app.get("/quickSearch", (req, res) => {
-  db.collection("mealType")
-    .find()
-    .toArray((err, result) => {
-      if (err) throw err;
-      res.send(result);
-    });
+  if (auth(req.header("x-auth-key"))) {
+    db.collection("mealType")
+      .find()
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.send(result);
+      });
+  } else {
+    res.send("Unauthorized ");
+  }
 });
 
 //get restaurant data
-app.get("/restaurant", (req, res) => {
+app.get("/restaurants", (req, res) => {
   let query = {};
-  let stateId = Number(req.query.state_id);
+  let stateId = Number(req.query.stateId);
   let mealId = Number(req.query.mealId);
-  if (stateId) {
+  if (stateId && mealId) {
+    query = { state_id: stateId, "mealTypes.mealtype_id": mealId };
+  } else if (stateId) {
     query = { state_id: stateId };
   } else if (mealId) {
     query = { "mealTypes.mealtype_id": mealId };
   }
-
   db.collection("restaurant")
     .find(query)
     .toArray((err, result) => {
