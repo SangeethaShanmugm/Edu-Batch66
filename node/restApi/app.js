@@ -2,6 +2,7 @@ const express = require("express");
 const mongo = require("mongodb");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 dotenv.config();
 const MongoClient = mongo.MongoClient;
 const app = express();
@@ -11,6 +12,11 @@ let db;
 
 // console.log(process.env);
 const MONGO_URL = process.env.MONGO_URL;
+
+//supporting libraries- middleware
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const data = [
   {
@@ -27,14 +33,14 @@ const data = [
   },
 ];
 
-const authkey = "b7e7620a6a53b247f5c77d7a6a5bbc9b";
-function auth(key) {
-  if (authkey === key) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// const authkey = "b7e7620a6a53b247f5c77d7a6a5bbc9b";
+// function auth(key) {
+//   if (authkey === key) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 // const locations = [
 //   {
@@ -106,31 +112,33 @@ app.get("/", (req, res) => {
 //location endpoint
 app.get("/locations", (req, res) => {
   // let key = req.query.key;
-  let key = req.header("x-auth-key");
-  if (authkey === key) {
-    db.collection("locations")
-      .find()
-      .toArray((err, result) => {
-        if (err) throw err;
-        res.send(result);
-      });
-  } else {
-    res.send("Unauthorized ");
-  }
+  db.collection("locations")
+    .find()
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+  // let key = req.header("x-auth-key");
+  // if (authkey === key) {
+
+  // } else {
+  //   res.send("Unauthorized ");
+  // }
 });
 
 //get mealtype data
 app.get("/quickSearch", (req, res) => {
-  if (auth(req.header("x-auth-key"))) {
-    db.collection("mealType")
-      .find()
-      .toArray((err, result) => {
-        if (err) throw err;
-        res.send(result);
-      });
-  } else {
-    res.send("Unauthorized ");
-  }
+  db.collection("mealType")
+    .find()
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+  // if (auth(req.header("x-auth-key"))) {
+
+  // } else {
+  //   res.send("Unauthorized ");
+  // }
 });
 
 //get restaurant data
@@ -153,7 +161,113 @@ app.get("/restaurants", (req, res) => {
     });
 });
 
-//particular resturant id
+app.get("/filter/:mealId", (req, res) => {
+  let mealId = Number(req.params.mealId);
+  let cuisineId = Number(req.query.cuisineId);
+  let lcost = Number(req.query.lcost);
+  let hcost = Number(req.query.hcost);
+  let query = {};
+  //sorting
+  let sort = { cost: 1 };
+  if (req.query.sort) {
+    sort = { cost: req.query.sort };
+  }
+  if (cuisineId && lcost && hcost) {
+    query = {
+      "mealTypes.mealtype_id": mealId,
+      $and: [{ cost: { $gt: lcost, $lt: hcost } }],
+      "cuisines.cuisine_id": cuisineId,
+    };
+  } else if (lcost && hcost) {
+    query = {
+      "mealTypes.mealtype_id": mealId,
+      $and: [{ cost: { $gt: lcost, $lt: hcost } }],
+    };
+  } else if (cuisineId) {
+    query = {
+      "mealTypes.mealtype_id": mealId,
+      "cuisines.cuisine_id": cuisineId,
+    };
+  }
+  //  else {
+  //   query = { "mealTypes.mealtype_id": mealId };
+  // }
+  db.collection("restaurant")
+    .find(query)
+    .sort(sort)
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//particular restaurant id
+// app.get("/details/:id", (req, res) => {
+//   let id = mongo.ObjectId(req.params.id);
+//   db.collection("restaurant")
+//     .find({ _id: id })
+//     .toArray((err, result) => {
+//       if (err) throw err;
+//       res.send(result);
+//     });
+// });
+
+app.get("/details/:id", (req, res) => {
+  let id = Number(req.params.id);
+  db.collection("restaurant")
+    .find({ restaurant_id: id })
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//get menu items
+app.get("/menu/:id", (req, res) => {
+  let id = Number(req.params.id);
+  db.collection("menu")
+    .find({ restaurant_id: id })
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//list of orders
+app.get("/orders", (req, res) => {
+  let email = req.query.email;
+  let query = {};
+  if (email) {
+    // query = {email: email}
+    query = { email };
+  }
+  db.collection("orders")
+    .find(query)
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//delete orders
+app.delete("/deleteOrder/:id", (req, res) => {
+  let oid = mongo.ObjectId(req.params.id);
+  db.collection("orders").deleteOne({ _id: oid }, (err, result) => {
+    if (err) throw err;
+    res.send("Order Deleted");
+  });
+});
+
+//place order
+
+app.post("/placeOrder", (req, res) => {
+  console.log(req.body);
+  db.collection("orders").insert(req.body, (err, result) => {
+    if (err) throw err;
+    res.send(result);
+  });
+});
+
 //get data
 app.get("/data", (req, res) => {
   res.send(data);
