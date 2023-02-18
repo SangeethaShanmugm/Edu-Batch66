@@ -268,6 +268,40 @@ app.post("/placeOrder", (req, res) => {
   });
 });
 
+//update orders
+app.put("/updateOrder/:id", (req, res) => {
+  let oid = Number(req.params.id);
+  db.collection("orders").updateOne(
+    { orderID: oid },
+    {
+      $set: {
+        status: req.body.status,
+        bank_name: req.body.bank_name,
+        date: req.body.date,
+      },
+    },
+    (err, result) => {
+      if (err) throw err;
+      res.send("Order Updated");
+    }
+  );
+});
+
+//Menu based on user selected items
+
+app.post("/menuItem", (req, res) => {
+  if (Array.isArray(req.body)) {
+    db.collection("menu")
+      .find({ menu_id: { $in: req.body } })
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.send(result);
+      });
+  } else {
+    res.send("Invalid input");
+  }
+});
+
 //get data
 app.get("/data", (req, res) => {
   res.send(data);

@@ -37,6 +37,7 @@ http://localhost:8080/menu/3
 ## Page 4
 
 => Menu details (selected items) (post)
+http://localhost:8080/menuItem
 => Place order (post)
 http://localhost:8080/placeOrder
 
@@ -58,6 +59,13 @@ http://localhost:8080/orders
 => List of order placed of particular user (get)
 http://localhost:8080/orders?email=alam@gmail.com
 => Update order status (put)
+http://localhost:8080/updateOrder/2
+
+{
+"status": "TAX_SUCCESS",
+"bank_name": "SBI",
+"date": "02/20/2023"
+}
 
 ========================
 

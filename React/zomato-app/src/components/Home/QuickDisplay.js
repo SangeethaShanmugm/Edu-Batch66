@@ -6,15 +6,17 @@ const QuickDisplay = (props) => {
     if (mealData) {
       return mealData.map((item) => {
         return (
-          <div class="tileContainer">
-            <div class="tileComponent1">
-              <img src={item.meal_image} alt="breakfast" />
+          <Link to={`/listing/${item.mealtype_id}`}>
+            <div class="tileContainer">
+              <div class="tileComponent1">
+                <img src={item.meal_image} alt="breakfast" />
+              </div>
+              <div class="tileComponent2">
+                <div class="componentHeading">{item.mealtype}</div>
+              </div>
+              <div class="componentSubHeading">{item.content}</div>
             </div>
-            <div class="tileComponent2">
-              <div class="componentHeading">{item.mealtype}</div>
-            </div>
-            <div class="componentSubHeading">{item.content}</div>
-          </div>
+          </Link>
         );
       });
     }
