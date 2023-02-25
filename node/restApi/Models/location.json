@@ -1,0 +1,23 @@
+[
+  {
+    "location_id": 1,
+    "location_name": "Ashok Nagar, New Delhi",
+    "state_id": 1,
+    "state": "Delhi",
+    "country_name": "India"
+  },
+  {
+    "location_id": 2,
+    "location_name": "Jeevan Nagar, New Delhi",
+    "state_id": 1,
+    "state": "Delhi",
+    "country_name": "India"
+  },
+  {
+    "location_id": 3,
+    "location_name": "Vasant Kunj, New Delhi",
+    "state_id": 1,
+    "state": "Delhi",
+    "country_name": "India"
+  }
+]

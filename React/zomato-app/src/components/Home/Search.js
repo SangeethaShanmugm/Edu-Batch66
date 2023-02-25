@@ -9,7 +9,7 @@ export default class Search extends Component {
     super();
     this.state = {
       location: "",
-      resturants: "",
+      restaurants: "",
     };
   }
 
@@ -42,7 +42,7 @@ export default class Search extends Component {
     fetch(`${rurl}${stateId}`, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
-        this.setState({ resturants: data });
+        this.setState({ restaurant: data });
         console.log(data);
       });
   };
@@ -62,7 +62,7 @@ export default class Search extends Component {
           </select>
           <select id="select-style">
             <option>---SELECT RESTURANTS----</option>
-            {this.renderRest(this.state.resturants)}
+            {this.renderRest(this.state.restaurant)}
           </select>
         </div>
       </div>

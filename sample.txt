@@ -428,3 +428,9 @@ find with a condition
 
 db.restaurant.find({state_id: 2, location_id:5 })
 db.restaurant.find({mealTypes.mealtype_id: 1})
+
+
+React
+------
+
+Virtual DOM - copy of a real DOM 

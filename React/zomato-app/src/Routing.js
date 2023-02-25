@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import Details from "./components/details/Details";
 import Home from "./components/Home/Home";
 import Listing from "./components/Listing/ListingApi";
 import Footer from "./Footer";
@@ -7,10 +8,10 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/listing/:mealId" element={<Listing />} />
-        </Routes>
+        <Header />
+        <Route exact path="/" component={Home} />
+        <Route path="/listing/:mealId" component={Listing} />
+        <Route path="/details" component={Details} />
         <Footer />
       </div>
     </BrowserRouter>
