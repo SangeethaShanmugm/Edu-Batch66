@@ -27,7 +27,7 @@ export default class MenuList extends Component {
       return menudata.map((item) => {
         return (
           <>
-            <div key={item._id}>
+            <div key={item.menu_id}>
               <div className="col-md-7">
                 <b>{item.menu_id}</b>
                 <img src={item.menu_image} style={{ height: 80, width: 80 }} />

@@ -434,3 +434,13 @@ React
 ------
 
 Virtual DOM - copy of a real DOM 
+
+
+
+Login
+-----------
+
+npm i bcrypt body-parser cors express jsonwebtoken mongoose
+
+
+mongoose.connect("mongodb://localhost:27017/ed66we")
