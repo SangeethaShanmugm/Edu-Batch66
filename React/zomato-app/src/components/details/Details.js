@@ -22,6 +22,13 @@ export default class Details extends Component {
     this.setState({ userItem: data });
   };
 
+  proceed = () => {
+    sessionStorage.setItem("menu", this.state.userItem);
+    this.props.history.push(
+      `/placeOrder/${this.state.details.restaurant_name}`
+    );
+  };
+
   render() {
     // let details = this.state.details
     let { details } = this.state;
@@ -78,7 +85,9 @@ export default class Details extends Component {
             >
               BACK
             </Link>
-            <button className="btn btn-success">Proceed</button>
+            <button className="btn btn-success" onClick={this.proceed}>
+              Proceed
+            </button>
           </div>
 
           <div className="col-md-12">

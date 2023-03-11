@@ -1,0 +1,12 @@
+.orderItems {
+    height: 300px;
+    width: 250px;
+    float: left;
+    box-shadow: 10px 10px 20px gray;
+
+}
+
+.orderItems>img {
+    height: 200px;
+    width: 100%
+}
